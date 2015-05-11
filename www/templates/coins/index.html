@@ -1,0 +1,46 @@
+<div class="coins-container">
+  <ion-header-bar frosted-bar type="bar-frosted" class="bar-auctions-blur">
+      <h4 class="auction-title">Buy Coins</h4>
+  </ion-header-bar>
+  <ion-content> 
+    <div class="pack" ng-model="basic">
+      <div class="number">
+        <p>Coins Amount</p>
+        <p>{{ basic.coins }}</p>
+      </div>
+      <div class="value">
+        <p>Value of Coins</p>
+        <p>{{ basic.value }} USD</p>
+      </div>
+      <div class="buy-now" ng-click="openModal(basic)">
+        <p>Buy Now</p>
+      </div>
+    </div>
+      <div class="pack" ng-model="medium">
+      <div class="number">
+        <p>Coins Amount</p>
+        <p>{{ medium.coins }}</p>
+      </div>
+      <div class="value">
+        <p>Value of Coins</p>
+        <p>{{ medium.value }} USD</p>
+      </div>
+      <div class="buy-now" ng-click="openModal(medium)">
+        <p>Buy Now</p>
+      </div>
+    </div>
+      <div class="pack" ng-model="advanced">
+      <div class="number">
+        <p>Coins Amount</p>
+        <p>{{ advanced.coins }}</p>
+      </div>
+      <div class="value">
+        <p>Value of Coins</p>
+        <p>{{ advanced.value }} USD</p>
+      </div>
+      <div class="buy-now" ng-click="openModal(advanced)">
+        <p>Buy Now</p>
+      </div>
+    </div>
+  </ion-content>
+</div>

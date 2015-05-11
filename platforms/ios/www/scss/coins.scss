@@ -1,0 +1,88 @@
+.modal-body {
+  padding: 3px 20px!important;
+}
+
+.coins-container {
+  background: #131415;
+  height: 100%;
+  .pack {
+    border-bottom : 1px solid #343535;
+    color: #fff;
+    padding: 1em 1em ;
+    text-align: center;
+    overflow: hidden;
+    .number {
+      float: left;
+      font-weight: bold;
+      margin : 0 0.9em 0 0;
+    }
+    .value {
+      float: left;
+    }
+    .buy-now {
+      margin : 0.6em 0.1em 0.6em 1.3em;
+      float: left;
+      p {
+        background: #333;
+        border-radius: 4px;
+        margin : 0;
+        padding: 0.5em;
+      }
+    }
+  }
+
+}
+
+.bar.bar-positive {
+  background-color: #222326;
+  border: none;
+  border-color: #222326 !important;
+}
+.modal {
+  display: block !important;
+  background-color: #648f00 !important;
+}
+.modal-backdrop {
+  background-color: transparent;
+}
+.stripe-modal {
+  background: #648f00;
+  border-radius: 10px;
+  overflow: hidden;
+  .field { position: relative;}
+  .button-pay {
+    margin: 0 auto;
+    width: 44%;
+  }
+  i {
+    color: #222326;
+    left: 0.4em;
+    font-size: 1.5em;
+    position: absolute;
+    top: 1.7em;
+    z-index: 100;
+  }
+  input {
+    text-align: center;
+  }
+  p {
+    color: #fff;
+    margin-top: 0.5em;
+  }
+  .btn-pay{
+    margin-top: 1.2em;
+    padding : 0.5em 2em;
+    background-color: #333 ;
+    border: none;
+    -webkit-box-shadow: 3px 4px 0px 0px rgba(58, 102, 42, 1);
+  }
+  .total-pay {
+    float: left;
+    margin-top: 1.4em;
+    width: 50%;
+    text-align: center;
+    h3 {
+      color: #333;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+.background {
+  background: #131415;
+}
+.loading-container {
+  height: 100%;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.green {
+  color : #5cb85c !important; 
+}
+.red {
+  background-color: #e74c3c !important;
+}
+.finished {
+  background: #f39c12 !important;
+  .winner {
+    color: #fff !important;
+  }
+}
+.finished-title {
+  color: #fff;
+  text-align: center;
+}
+.closed {
+  background: #648f00;
+  height: 200px;
+  position: relative;
+  padding: 0.5em 1em !important;
+  .title-name {
+    h3 {
+      color: #333 !important;
+      font-size: 1.5em !important; 
+    }
+    p {
+      color: #fff !important;
+    }
+  }
+  .bar-item {
+    display: none;
+  }
+  .image-container {
+    margin : 1em auto;
+    width: 60%;
+  }
+  .info-container {
+    float: left;
+    width: 52% !important;
+  }
+  .time {
+    float: right;
+    font-size: 1.5em;
+    margin-top: 1em;
+    width: 35%;
+    p {
+      font-size: 0.6em;
+      text-align: center;
+    }
+  }
+  .draw-button-container {
+    right:2em;
+    bottom: 3em;
+    position: absolute;
+    .draw-button {
+      background-color: #333;
+      border: none;
+      color: #fff;
+      padding: 0.5em;
+      border-radius: 10px;
+      font-weight: normal;
+    }
+  }
+  .progress-bets{
+    display: inline;
+    right: 1em;
+    bottom: 2.7em;
+    font-size: 1.5em;
+    font-weight: 200;
+  }
+}
+.bar-auctions-blur {
+  background: #222326;
+  text-align: center;
+  .auction-title {
+    color : #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0 10px;
+    min-width: 30px;
+    height: 43px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 44px;
+  }
+}
+.container-progress {
+  border-radius : 4px !important;
+}
+.view-title {
+  background: #333;
+  width: 100%;
+  h4 {
+    color: #fff;
+    margin: 0 ;
+    padding: 0.5em;
+    text-align: center;
+  }
+}
+.auction-wrapper{
+  border-bottom: 1px solid #343535;
+  margin: auto;
+  padding: 1em ;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container {
+  float: left;
+  width: 30%;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+.info-container {
+  float: right;
+  width: 65%;
+  .closed-time {
+    h4{
+      color: #ccc;
+      margin : 0.3em 0;
+    }
+  }
+  .number-of-bets {
+    p {
+      margin: 0;
+    }
+  }
+  .bar-item {
+    margin: 0.8em 0 ;
+    position: relative;
+    span {
+      color: #fff;
+      margin-top: 0.4em;
+    }
+    .progress-text {
+      float: left;
+      text-align: center;
+      margin: auto;
+      width: 11em;
+      padding: 0;
+      line-height: 2;
+    }
+
+  }
+  .title-name {
+    margin-top : 0.2em;
+    h3{
+      color: #fff;
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    p {
+      color: #ccc;
+      margin: 0;
+    }
+  }
+  .time {
+    margin-top: 0.2em;
+  }
+  .countdown {
+    color: #fff;
+    text-align: left;
+  }
+}

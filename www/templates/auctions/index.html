@@ -1,0 +1,70 @@
+<ion-pane >
+  <ion-header-bar frosted-bar type="bar-frosted" class="bar-auctions-blur">
+    <h4 class="auction-title">My Auctions</h4>
+  </ion-header-bar>
+  <ion-content class="background" has-header="true" has-tabs="true">  
+    
+    <ion-slide-box show-pager="true" does-continue="false" on-slide-changed="slideHasChanged($index)">
+      <ion-slide class="closed red" ng-repeat="auction in closed">
+        <div class="info-container">
+          <div class="title-name">
+            <h3>{{auction.product.name}}</h3>
+            <p class="number-of-bets">Bets on Auction {{auction.user_bets}}</p>
+            <div class="progress-bets">
+              <span>{{auction.bets_on_auction}}/</span><span>{{auction.total_bets}}</span>  
+            </div>
+          </div>
+        </div>
+        <div class="time" clock time='auction.closed_time' params="true">
+            <div class='countdown'> 
+            </div>
+            <p>Time Left</p>
+          </div>
+        <div class="image-container">
+          <img ng-src="img/{{auction.product.image}}mini.png" alt="">
+        </div>
+        <div ng-if="auction.state == 'closed'"class="draw-button-container">
+          <button class="draw-button" ng-click="openAuction(auction)">Go to Draw!</button>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+
+
+
+    <div  class="auction-wrapper" ng-repeat="auction in auctions | orderBy:predicate" ng-click="openAuction(auction)">
+      <div class="image-container">
+        <img ng-src="img/{{auction.product.image}}mini.png" alt="">
+      </div>
+      <div class="info-container">
+        <div class="title-name">
+          <h3>{{auction.product.name}}</h3>
+          <p class="number-of-bets">Bets on Auction {{auction.user_bets}}</p>
+        </div>
+        <div class="time" clock time='auction.finish_time' params="true" plus="true">
+          <div class='countdown'>
+          </div>
+        </div>
+        <div class="bar-item">
+          <div class="container-progress" selected="auction" edit-radius progress-bar="{{auction.bets_on_auction}}"></div>
+          <span class="left green"><b>{{auction.bets_on_auction}}</b></span>
+          <span class="progress-text"><b>Progress</b></span>
+          <span class="right"><b>{{auction.total_bets}}</b></span>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="finished-title">Finished Auction</h4>
+    <div class="auction-wrapper finished" ng-repeat="auction in finished">
+      <div class="image-container">
+        <img ng-src="img/{{auction.product.image}}mini.png" alt="">
+      </div>
+      <div class="info-container">
+        <div class="title-name">
+          <h3>{{auction.product.name}}</h3>
+          <p class="winner">Winner {{auction.winner}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>

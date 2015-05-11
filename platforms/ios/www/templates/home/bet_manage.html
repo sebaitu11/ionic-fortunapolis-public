@@ -1,0 +1,13 @@
+<div class="bet-container" >
+  <a  class="minus" ng-click="downBet()">
+    <i class="fa fa-angle-down"></i>
+  </a>
+  <div class="amount">
+    <p>{{amount}}</p>
+  </div>
+  <a class="plus" ng-click="upBet()">
+    <i class="fa fa-angle-up"></i>
+  </a>
+  <div modalBet class="bet-button" ng-click="openModal()"><p>Place Bid</p></div>
+  <div class="coins"><p>Total spent coins: {{total_coins}}</p></div>
+</div>

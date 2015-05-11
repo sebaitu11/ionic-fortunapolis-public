@@ -1,0 +1,74 @@
+<!-- Categories Top Menu -->
+<span my-loading-spinner="viewLoading" >
+  <ion-content has-bouncing="false" >
+  <div class="bar bar-header bar-stable categories">
+    <h4>Categories</h4>
+    <select ng-model="query" ng-change="changeCategory(query)"ng-options="category.id as category.name for category in categories"></select>
+  </div>
+
+    <!-- Auctions Top Menu -->
+    <div class="container-auctions">
+      <div class="auctions">
+        <ion-scroll direction="x" scrollbar-x="false" class="wide-as-needed list-horizontal" ng-repeat="category in categories | filter: {id :query} ">
+          <li class="item-horizontal" ng-click="getAuction(auction,category.auctions); animateMain()" ng-repeat="auction in category.auctions ">
+            <p>{{ auction.product.name}}</p>
+            <img ng-src="img/{{auction.product.image}}mini.png">
+          </li>
+        </ion-scroll>
+      </div>
+      </div>
+    </div>
+
+    <!-- MainAuction Section -->
+    
+    <div class="showcase-container" ng-repeat="category in categories | filter: {id : query}">
+        <ion-slide-box show-pager="false" does-continue="false" on-slide-changed="slideHasChanged($index);updateSelected($index)">
+          <ion-slide ng-repeat="auction in category.auctions">
+            <div class="title-auction">
+              <p>{{ auction.product.description}}</p>
+              <h1>{{ auction.product.name}}</h1>
+            </div>  
+            <div class="image-auction">
+              <img ng-src="img/{{auction.product.image}}.jpg">
+              <i class="coin-value"><p>{{ auction.tickets_by_bet}}</p></i>
+          </div>
+          </ion-slide>
+        </ion-slide-box>
+    </div>
+
+    <!-- ProgressBar Section -->
+
+    <div class="info-bar example--3" ng-init="init()">
+       <!-- <div class="bet-now">
+          <p>Place Bid</p>
+          <i class="fa fa-hand-o-down"></i>
+        </div> -->
+      <div class="bar-bets">
+       <div class="bar-item">
+        <span class="min">{{ selected.bets_on_auction}}</span>
+          <div class="container-progress" selected="selected" progress-bar="{{selected.bets_on_auction}}"></div>
+          <span class="max">{{selected.total_bets }}</span>
+        </div> 
+        <p>Current Bids</p>
+      </div>
+
+    <!-- Time Section -->
+      <div class="time home-clock" clock plus="true" time="selected.finish_time" params="false">
+      </div>
+      <p class="time-left">Time Left</p>
+
+    <!-- Description Section -->
+      <div class="description" slide-desc ng-click="showd()">
+        <h3>Description</h3>
+        <i class="fa fa-plus-square-o"></i>
+        <div class="hide-description">
+          {{selected.product.description}}
+        </div>
+      </div>
+
+    <!-- Bet Section -->
+    <div bet-manage="amount"></div>
+      </div>
+    </div>
+  </ion-content>
+</span>

@@ -1,0 +1,18 @@
+<div class="bar bar-header item-input-inset search-bar">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios7-search placeholder-icon"></i>
+    <input ng-model="search" type="search" placeholder="Search">
+  </label>
+  <button class="button button-clear">
+    Cancel
+  </button>
+</div>
+
+<div class="explore">
+  <ul class="explore-categories" ng-repeat="category in categories">
+    <h1>{{category.name}}</h1>
+    <li ng-click="openAuction(auction)" ng-repeat="auction in category.auctions | filter : search">
+      <h4>{{auction.product.name}}</h4>
+    </li>
+  </ul>
+</div>

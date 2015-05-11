@@ -1,0 +1,25 @@
+<div class="fortune">
+  <div class="logo">
+    <img ng-src="img/logo.png" alt="">
+  </div>
+
+  <form  ng-submit="login(user)" ng-model="user">
+    <div class="input">
+      <div class="icon"><i class="user fa fa-user"></i></div>
+      <input ng-model="user.email" type="email" required name="email" placeholder="Email">
+    </div>
+    <div class="input">
+      <div class="icon"><i class="fa fa-key"></i></div>
+      <input ng-model="user.password" type="password" name="password" placeholder="Password">
+    </div>
+    <div class="container-login">
+    <input class="login" type="submit" value="Log In">
+    <a href="#"><p>Forgot Password?</p></a>
+    <div class="sign-up">
+      <span>New to fortunapolis?</span>
+      <a href="#register">Sign up now</a>
+    </div>
+  </form>
+
+  </div>
+</div>

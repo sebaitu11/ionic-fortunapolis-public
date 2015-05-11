@@ -1,0 +1,116 @@
+body {
+  background-color : #131416 !important;
+}
+input {
+  border-radius: 0;
+}
+.popup {
+  color: #fff;
+  background-color: #e74c3c;
+}
+.popup-head {
+  background-color: #333;
+  border-bottom: none;
+}
+.popup-body {
+  text-align: center;
+  padding: 1px;
+  i {
+    font-size: 3em;
+  }
+}
+.popup-buttons {
+  &.row {
+    padding: 0px;
+  }
+}
+.fortune {
+  background: #131416;
+}
+.modal-dialog {
+  margin: auto;
+  height: 100%;
+}
+.fortune .logo {
+  margin: 0 auto;
+  padding: 2.5em 0;
+  width: 310px;
+}
+body .fortune .logo img {
+  width: 100%;
+}
+body .fortune .input {
+  margin: 0 auto;
+  padding-bottom: 1.5em;
+  width: 255px;
+}
+body .fortune .input .icon {
+  background: #b3b3b3;
+  border-radius: 10px 0px 1px 10px;
+  float: left;
+  height: 40px;
+  position: absolute;
+  width: 42px;
+}
+.icon i {
+  color :#868586;
+  display: block;
+  font-size: 1.9em;
+  padding: 0.2em 0;
+  width :26px;
+  margin: 0 auto;
+}
+.icon .user{
+  width: 22px;
+}
+body .fortune .input p {
+  color: #ccb971;
+  font-size: 1.3em;
+  text-align: center;
+}
+body .fortune .input input {
+  border: none;
+  border-radius: 14px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+body .fortune .container-login p {
+  color:#b9b9b9;
+  margin-top: 0.7em;
+  text-align: center;
+}
+body .fortune .container-login .login {
+  background : #648f00;
+  border-radius: 14px;
+  border: none;
+  display: block;
+  height: 52px;
+  margin: 0 auto;
+  width: 255px;
+}
+body .fortune .container-login .login p {
+  color: #0f0e0e;
+  font-size: 1.5em;
+  margin: 1em 0;
+  padding: 0.5em 0;
+  text-align: center;
+}
+body .fortune .input .errors {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+body .fortune .container-login .sign-up {
+  text-align: center;
+  margin-top: 2em;
+  width: 100%;
+}
+body .fortune .container-login .sign-up span {
+  color: #b8a574;
+}
+body .fortune .container-login .sign-up a {
+  color: #648f00;
+  text-decoration: none;
+}

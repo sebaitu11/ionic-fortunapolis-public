@@ -1,0 +1,28 @@
+<div class="modal">
+  <div class="modal-dialog bet-now-modal" ng-controller="ModalBet">
+   <ion-header-bar class="bar bar-bet-modal">
+    <h1 class="title">Bid Details</h1>
+    <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+   </ion-header-bar>
+    <div class="container-bet-modal" has-header="true">
+      <div class="modal-content bet-modal">
+        <div class="modal-body ">
+          <p>{{selected.product.description}}</p>
+          <h4>{{selected.product.name}}</h4>
+          <div class="amount-bet">
+            <h2>Amount of Bets</h2>
+            <p>{{amount}}</p>
+          </div>
+          <div class="coins">
+            <h2>Total Spent Coins</h2>
+            <p>{{total_coins}}</p>
+          </div>
+        </div>
+        <div class="bet-now-button-modal" ng-click="submitBets()">
+          <p>Bid Now!!!!</p>
+        </div>
+        <div class="loading-bets"></div>
+      </div>
+    </div>
+  </div>
+</div>

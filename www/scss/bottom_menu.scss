@@ -1,0 +1,26 @@
+a:hover, a:focus {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.tabs {
+  background: #222326;
+  border-top-width: 0px;
+  height: 54px !important;
+  padding-top: 0;
+  position: fixed!important;
+}
+.tab-item.tab-item-active {
+  background: #648f00;
+  color: #fff;
+}
+.tab-item {
+  color: #fff;
+  padding: 0.4em 0;
+  opacity: 1;
+}
+.tabs .tab-item .badge {
+  background-color: #e74c3c;
+  color: #fff;
+}
+

@@ -1,0 +1,24 @@
+.search-bar{
+  background: #222326;
+  label {
+    margin-bottom: 0;
+  }
+}
+
+.explore {
+  background: #131415;
+  .explore-categories {
+    padding: 0.4em 1em;
+    h1 {
+      color: #fff;
+      text-transform: capitalize;
+    }
+    li {
+      h4 {
+        border-bottom: 1px solid #343535;
+        color: #fff;
+        padding-bottom: 0.5em;
+      }
+    }
+  }  
+}
